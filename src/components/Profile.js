@@ -3,6 +3,8 @@ import { Grid, Header, Message } from 'semantic-ui-react'
 
 import autobind from 'react-autobind'
 import NavigationUser from './NavigationUser';
+
+import Logo from '../assets/sample.jpg'
 class Profile extends Component {
   constructor(props){
     super(props)
@@ -14,7 +16,7 @@ class Profile extends Component {
   }
 
   handleItemClick = (e, { name }) => {
-    if (name === 'home' || name === 'profile' || name === 'friends') {
+    if (name === 'home' || name === 'profile' || name === 'friends' || name == 'notification') {
       this.setState({ activeItem: name});
     } else {
       this.setState({ activeItem: name });
@@ -30,7 +32,6 @@ class Profile extends Component {
           menuHandler = {this.handleItemClick}
           activeItem = {this.state.activeItem}
         />
-        {"profile"}
         
       </div>
     )

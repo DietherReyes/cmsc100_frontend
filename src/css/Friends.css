@@ -1,0 +1,7 @@
+.ui.segment > div {
+	text-align: center;
+}
+
+.ui.segment > div > .ui.label {
+	margin-top: 2%;
+}

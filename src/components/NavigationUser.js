@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import autobind from 'react-autobind';
-import { Menu } from 'semantic-ui-react';
+import { Menu, Input, Icon } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import { Link } from 'react-router-dom';
+//import './../css/Navigation.css'
 
 class NavigationUser extends Component {
   constructor(props) {
@@ -11,6 +12,11 @@ class NavigationUser extends Component {
   }
 
   render() {
+    var divStyle = {
+        height: '20%',
+        margin: '1% 1% 1% 25%'
+    };
+
     return (
       <div>
         <Menu
@@ -53,8 +59,22 @@ class NavigationUser extends Component {
         FRIENDS
         </Menu.Item>
 
-        
-        
+        <Menu.Item
+            active={this.props.activeItem === 'notifications'}
+            name='notifications'
+            onClick={this.props.menuHandler}
+            as={Link}
+            to='/notifications'
+        >
+        NOTIFICATIONS
+        </Menu.Item>
+
+        <Input
+            size="mini"
+            icon={<Icon name='search' inverted circular link />}
+            placeholder='Search...'
+            style={divStyle}
+        />
 
         <Menu.Item
             position="right"
@@ -63,9 +83,6 @@ class NavigationUser extends Component {
         >
         LOGOUT
         </Menu.Item>
-
-
-          
 
         </Menu>
       </div>
