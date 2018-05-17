@@ -10,6 +10,8 @@ import NavigationLogIn from "./components/NavigationLogIn";
 import Home from "./components/Home";
 import Friends from "./components/Friends";
 import Profile from "./components/Profile";
+import Notifications from "./components/Notification"
+
 class App extends Component {
 
   constructor(props){
@@ -31,6 +33,7 @@ class App extends Component {
               <Route exact path="/home" component={Home} />
               <Route exact path="/profile" component={Profile} />
               <Route exact path="/friends" component={Friends} />
+              <Route exact path="/notifications" component={Notifications}/>
             </Container>
           </div>
 
