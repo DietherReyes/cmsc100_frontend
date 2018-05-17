@@ -67,8 +67,8 @@ class Login extends Component {
           <Modal.Content>
 
             <Form>
-              <Form.Input label='Username' placeholder='Username' type='text' onChange={this.handleUsername} />
-              <Form.Input label='Password' placeholder='Password' type='password' onChange={this.handlePassword} />
+              <Form.Input value={this.state.username} label='Username' placeholder='Username' type='text' onChange={this.handleUsername} />
+              <Form.Input value={this.state.password} label='Password' placeholder='Password' type='password' onChange={this.handlePassword} />
             </Form>
             
           </Modal.Content>

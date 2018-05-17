@@ -6,7 +6,10 @@ import 'semantic-ui-css/semantic.min.css';
 import './css/App.css'
 import About from "./components/About.js";
 import SignUp from "./components/SignUp.js";
-import NavigationLogIn from "./components/NavigationLogIn"
+import NavigationLogIn from "./components/NavigationLogIn";
+import Home from "./components/Home";
+import Friends from "./components/Friends";
+import Profile from "./components/Profile";
 class App extends Component {
 
   constructor(props){
@@ -22,10 +25,12 @@ class App extends Component {
       <div className="App">
         <Router >
           <div>
-            <NavigationLogIn/>
+
             <Container style={{ marginTop: '7em' }}>
               <Route exact path="/" component={About} />
-              
+              <Route exact path="/home" component={Home} />
+              <Route exact path="/profile" component={Profile} />
+              <Route exact path="/friends" component={Friends} />
             </Container>
           </div>
 
