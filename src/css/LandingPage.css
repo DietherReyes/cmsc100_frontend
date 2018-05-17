@@ -1,0 +1,48 @@
+.LandingPage {
+  /*text-align: center;*/
+
+}
+.centerline{
+  text-align: center;
+}
+.padding{
+  padding:40px;
+
+}
+.loginpadding{
+  padding:80px;
+  
+}
+
+
+.Landing-logo {
+  animation: App-logo-spin infinite 20s linear;
+
+  height: 100px;
+  float: left;
+}
+
+.Landing-header {
+  background-color: #557FB3;
+  height: 125px;
+  padding: 10px;
+  padding-bottom: 15px;
+  color: white;
+  overflow: auto;
+}
+
+.Landing-title {
+  font-size: 3em;
+  color: white;
+  float: left;
+
+}
+
+.Landing-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
