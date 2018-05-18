@@ -6,7 +6,7 @@ import NavigationUser from './NavigationUser';
 import Logo from '../assets/sample.jpg'
 import FriendComponent from './FriendComponent.js'
 
-const name_array = ["Jan Magnus Mariano", "Diether Binuya Reyes", "Kopiko 78 C", "Absolute Drinking Water"];
+const name_array = ["Jan Magnus Mariano", "Diether Binuya Reyes", "Kopiko 78 C", "Absolute Drinking Water", "ReactJS", "Donald Knuth"];
 
 class Friends extends Component {
   constructor(props){
