@@ -5,7 +5,14 @@ import {Card, Label, Icon, Image, Segment, Modal } from 'semantic-ui-react';
 import Logo from '../assets/sample.jpg'
 
 import {Button, Input } from 'semantic-ui-react';
+import Post from './Post'
 import './../css/Profile.css'
+
+const dummy_post = [
+{author: "Steve Jobs",post: "CMSC 100", comments: 
+  [{content: "Wow", author: "Diether", timestamp: "12:56 P.M"},
+  {content: "Amazing", author: "Reyes", timestamp: "11:11 A.M"}]},
+{author: "Someone",post: "Puyat", comments: []}];
 
 class Home extends Component {
   constructor(props){
@@ -13,7 +20,9 @@ class Home extends Component {
     autobind(this)
     this.state = {
       activeItem: 'home',
-      
+      username: 'Diether B. Reyes',
+      birthday: 'May 18, 2018',
+      about: 'Has a passion for fashion'
     }
 
     this.handleComment = this.handleComment.bind(this);
@@ -52,22 +61,28 @@ class Home extends Component {
               </Label>
 
               <span class = "attribute">
-                
+                {this.state.username}
               </span>
 
               <br/>
 
               <Label>
                 <div className="ui large label"> Birthday </div>
-                <div className="ui large label">{this.state.empNum}</div>
               </Label>
+
+              <span class = "attribute">
+                {this.state.birthday}
+              </span>
 
               <br/>
 
               <Label>
                 <div className="ui large label"> About </div>
-                <div className="ui large label">{this.state.empNum}</div>
               </Label>
+
+              <span class = "attribute">
+                {this.state.about}
+              </span>
           </Segment>
           
         </Segment.Group>
@@ -83,16 +98,17 @@ class Home extends Component {
             action = "Post"
             placeholder="Input current thoughts here"/>
 
-          <Button>
-            <Icon name = "thumbs up"/>
-          </Button>
-
-          <Button onClick = {this.handleComment}>
-            <Icon name = "comments"/>
-          </Button>
-
         </Segment.Group>
-        
+
+        {
+          dummy_post.map(item=>{
+            return(
+              <Post
+                content={item}
+              />
+            )
+          })
+        }
       </div>
     )
   }
